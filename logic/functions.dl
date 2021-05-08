@@ -492,7 +492,7 @@ IRBlockEdge(irfrom, irto) :-
   // can be shared by callee and caller, but keeps our produced IR precise.
   // Removing it results in inconsistent IR (return blocks with local edges from them)
   // and less precise, but also more complete output.
-  !IsFunctionCallReturn(_, _, func, _, from, _), // REVIEW: Keeping this for now. We need to fix it.
+  //!IsFunctionCallReturn(_, _, func, _, from, _), // REVIEW: Keeping this for now. We need to fix it.
   !IsFunctionCallReturn(_, _, _, ctxFrom, from, to),
   !IsFunctionCallReturn(ctxFrom, from, to, _, _, _),
   Block_IRBlock(to, func, irto).
@@ -508,7 +508,7 @@ IRBlockEdge(irfrom, irto) :-
   // can be shared by callee and caller, but keeps our produced IR precise.
   // Removing it results in inconsistent IR (return blocks with local edges from them)
   // and less precise, but also more complete output.
-  !IsFunctionCallReturn(_, _, func, _, from, _), // REVIEW: Keeping this for now. We need to fix it.
+  //!IsFunctionCallReturn(_, _, func, _, from, _), // REVIEW: Keeping this for now. We need to fix it.
   !IsFunctionCallReturn(_, _, _, ctxFrom, from, to),
   !IsFunctionCallReturn(ctxFrom, from, to, _, _, _),
   Block_IRBlock(to, func, irto).
