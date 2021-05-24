@@ -36,7 +36,7 @@
 ******/
 
 .decl CanReachUnderContext(fromCtx: Context, from:Block, ctx: Context, block: Block)
-.limitsize CanReachUnderContext(n=LIMITSIZE_CAN_REACH_UNDER_CONTEXT)
+//.limitsize CanReachUnderContext(n=LIMITSIZE_CAN_REACH_UNDER_CONTEXT)
 
 CanReachUnderContext(ctx, block, ctx, block) :-
   ReachableContext(ctx, block).
